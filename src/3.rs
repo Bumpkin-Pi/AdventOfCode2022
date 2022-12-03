@@ -5,7 +5,7 @@ use std::fs;
 
 fn main() {
 
-    let input = fs::read_to_string("./input_d2.txt")
+    let input = fs::read_to_string("./input_d3.txt")
         .expect("Plz be something in this file");
     let data = input.split("\n").collect::<Vec<&str>>();
 

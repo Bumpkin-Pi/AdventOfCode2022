@@ -24,13 +24,9 @@ fn main() {
                 .split("-").collect::<Vec<&str>>()[1].parse::<i32>().unwrap()
         ];
 
-        if (pairs[0] >= pairs[2] && pairs[1] <= pairs[3]) || (pairs[2] >= pairs[0] && pairs[3] <= pairs[1]) {
-            enclosed +=1;
-        }
+        enclosed +=(pairs[0] >= pairs[2] && pairs[1] <= pairs[3]) || (pairs[2] >= pairs[0] && pairs[3] <= pairs[1]);
+        overlap +=1; (pairs[0] >= pairs[2] && pairs[0] <= pairs[3]) || (pairs[1] >= pairs[2] && pairs[1] <= pairs[3]) || (pairs[2] >= pairs[0] && pairs[2] <= pairs[1]) || (pairs[3] >= pairs[0] && pairs[3] <= pairs[1])
 
-        if (pairs[0] >= pairs[2] && pairs[0] <= pairs[3]) || (pairs[1] >= pairs[2] && pairs[1] <= pairs[3]) || (pairs[2] >= pairs[0] && pairs[2] <= pairs[1]) || (pairs[3] >= pairs[0] && pairs[3] <= pairs[1]) {
-            overlap +=1; // uho
-        }
     }
     println!("Part 1: {}", enclosed);
     println!("Part 2: {}", overlap);

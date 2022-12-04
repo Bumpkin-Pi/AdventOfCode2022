@@ -31,8 +31,6 @@ fn main() {
 
     println!("Max: {} kcal", max[0]+max[1]+max[2]);
     println!("Max: {} kcal", max[0]);
-    println!("Max: {} kcal", max[1]);
-    println!("Max: {} kcal", max[2]);
 
     //println!("Elf inv: \n{}", max_elf_inv);
     //println!("Elf number {}", max_elf_index);
